@@ -4,8 +4,11 @@
  **/
 
 import confetti from 'canvas-confetti';
+import { getParticleCount } from './get-particle-count';
+
+export const PARTICLE_COUNT = 200;
 
 confetti.create(document.getElementById('canvas'), {
   resize: true,
   useWorker: true,
-})({ particleCount: 200, spread: 200 });
+})({ particleCount: getParticleCount(), spread: 200 });
